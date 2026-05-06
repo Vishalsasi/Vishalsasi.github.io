@@ -1203,9 +1203,45 @@
           >
             GitHub <span>→</span>
           </a>
-          <a href="your-resume.pdf" target="_blank" class="contact-link">
-            Resume / CV <span>→</span>
-          </a>
+          <div style="position: relative">
+            <a
+              onclick="toggleDownloads()"
+              class="contact-link"
+              style="cursor: pointer"
+            >
+              Resume & Cover Letter <span>→</span>
+            </a>
+            <div
+              id="dlMenu"
+              style="
+                display: none;
+                flex-direction: column;
+                gap: 8px;
+                margin-top: 8px;
+              "
+            >
+              <a href="Vishal_Srinivasan_DE.pdf" download class="contact-link"
+                >PDF Resume English <span>↓</span></a
+              >
+              <a href="Vishal_Srinivasan_ENG.xlsx" download class="contact-link"
+                >PDF Resume Deutsch <span>↓</span></a
+              >
+              <a href="CoverLetter_DE.pdf" download class="contact-link"
+                >PDF Cover Letter English <span>↓</span></a
+              >
+              <a href="CoverLetter_ENG.pdf" download class="contact-link"
+                >PDF Cover Letter Deutsch <span>↓</span></a
+              >
+            </div>
+          </div>
+
+          <script>
+            function toggleDownloads() {
+              const menu = document.getElementById("dlMenu");
+              menu.style.display =
+                menu.style.display === "none" ? "flex" : "none";
+            }
+          </script>
         </div>
       </div>
     </section>
